@@ -1,6 +1,7 @@
 ﻿using ConsoleApp1;
 
-String? xml = Console.ReadLine();
+Console.WriteLine("Enter XML:");
+string? xml = Console.ReadLine();
 
 XmlParser xmlParser = new XmlParser(xml);
 
