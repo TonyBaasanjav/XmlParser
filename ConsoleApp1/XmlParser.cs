@@ -12,7 +12,6 @@ namespace ConsoleApp1
     private TagClosingHandler tagClosingHandler;
     private CharHandler charHandler;
 
-  // Create a class constructor for the Car class
     public XmlParser(string? xml)
     {
       if (xml == null || xml.Length == 0 || xml.Trim().Length == 0)
