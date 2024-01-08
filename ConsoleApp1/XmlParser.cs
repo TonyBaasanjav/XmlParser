@@ -26,7 +26,7 @@ namespace ConsoleApp1
     {
       for(int i = 0; i < charArray.Length; i++) 
       {
-        ICharHandler handler = determineInstance(charArray[i]);
+        ICharHandler handler = handlerType(charArray[i]);
         int skipTo = handler.handle(i);
         if(skipTo != i)
           i = skipTo;
@@ -34,7 +34,7 @@ namespace ConsoleApp1
       return currentState == XmlState.ClosingTagEnded;
     }
 
-    public ICharHandler determineInstance(char ch) {
+    public ICharHandler handlerType(char ch) {
       switch(ch) 
         {
           case '<': return tagOpeningHandler;
