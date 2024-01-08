@@ -19,7 +19,12 @@ System logic:
     - we should be in OpeningTagEnded or ClosingTagEnded state in order to get to this state
   d. ClosingTagEnded -> indicates closing tag just ended, we should check if tag names matches
     - we should be in ClosingTagStarted state only
-3. 
+3. Refactored ICharHandler out of XmlParser to make it more readable and more single responsibility using polymorphism
+4. Trimmed initial xml input to skip any space character in end or start
+
+Todo:
+
+1. I felt like Handlers could be further divided into each XmlState's entry, but it could be controversial since the state is derived from same character (e.g: if we wrote OpeningTagStarted or ClosingTagStarted state handler it could derive from < character)
 
 # Considered test cases: 
 
